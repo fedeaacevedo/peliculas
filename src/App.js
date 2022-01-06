@@ -4,35 +4,81 @@ import Pelicula from "./pelicula";
 
 function App() {
 
-	return (
-  <PageWrapper>
-			<Pelicula
-			titulo="oblivion (2012)"
-			calificacion="8.1"
-			director="Joss Whedon"
-			actores="Chris Evans, Robert Downey Jr., Chris Hemsworth"
-			fechas="Release: 1 May 2015"
-			duracion="2h21’"
-			img="images/uploads/mv1.jpg"
-			>
-			Earth's mightiest heroes must come together and learn to fight as a team
-			if they are to stop the mischievous Loki and his alien army from enslaving
-			humanity...
-			</Pelicula>
+	let peliculas = [
+		{
+		  "titulo": "oblivion (2012)",
+		  "calificacion": "8.1",
+		  "director": "Joss Whedon",
+		  "actores": "Robert Downey Jr., Chris Evans, Chris Hemsworth",
+		  "fecha": "1 May 2015",
+		  "duracion": "2h 21min",
+		  "img": "images/uploads/mv1.jpg",
+		  "descripcion": "Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity..."
+		},
+		{
+		  "titulo": "into the wild (2014)",
+		  "calificacion": "7.5",
+		  "director": "Joss Whedon",
+		  "actores": "Robert Downey Jr., Chris Evans, Chris Hemsworth",
+		  "fecha": "1 May 2015",
+		  "duracion": "2h 21min",
+		  "img": "images/uploads/mv2.jpg",
+		  "descripcion": "Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity..."
+		},
+		{
+		  "titulo": "BLADE RUNNER (2015)",
+		  "calificacion": "7.3",
+		  "director": "Peyton Reed",
+		  "actores": "Paul Rudd, Michael Douglas",
+		  "fecha": "1 May 2015",
+		  "duracion": "2h 21min",
+		  "img": "images/uploads/mv3.jpg",
+		  "descripcion": "Armed with a super-suit with the astonishing ability to shrink in scale but increase in strength, cat burglar Scott Lang must embrace his inner hero and help..."
+		},
+		{
+		  "titulo": "MULHOLLAND PRIDE (2013)",
+		  "calificacion": "7.2",
+		  "director": "Shane Black",
+		  "actores": "Robert Downey Jr., Guy Pearce,Don Cheadle",
+		  "fecha": "1 May 2015",
+		  "duracion": "2h 21min",
+		  "img": "images/uploads/mv4.jpg",
+		  "descripcion": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution."
+		},
+		{
+		  "titulo": "SKYFALL: EVIL OF BOSS (2013)",
+		  "calificacion": "7.0",
+		  "director": "Alan Taylor",
+		  "actores": "Chris Hemsworth, Natalie Portman,Tom Hiddleston",
+		  "fecha": "1 May 2015",
+		  "duracion": "2h 21min",
+		  "img": "images/uploads/mv5.jpg",
+		  "descripcion": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution."
+		}];
 
-			<Pelicula
-			titulo="into the wild  (2014)"
-			calificacion="8.1"
-			director="Joss Whedon"
-			actores="Chris Evans, Robert Downey Jr., Chris Hemsworth"
-			fechas="Release: 1 May 2015"
-			duracion="2h21’"
-			img="images/uploads/mv2.jpg"
-			>
-			As Steve Rogers struggles to embrace his role in the modern world, he
-			teams up with a fellow Avenger and S.H.I.E.L.D agent, Black Widow, to
-			battle a new threat...
+	return (
+  		<PageWrapper>
+
+			{peliculas.map(pelicula => 
+			 <Pelicula
+					titulo={pelicula.titulo}
+					calificacion={pelicula.calificacion}
+					director={pelicula.director}
+					actores={pelicula.actores}
+					fechas={pelicula.fechas}
+					duracion={pelicula.duracion}
+					img={pelicula.img}
+					>
+					Earth's mightiest heroes must come together and learn to fight as a team
+					if they are to stop the mischievous Loki and his alien army from enslaving
+					humanity...
 			</Pelicula>
-  </PageWrapper>
-	)}
+			)} 
+			
+
+			
+  		</PageWrapper>
+	);
+	}	
+
 export default App;
